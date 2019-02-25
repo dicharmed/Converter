@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Конвертер величин</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="display-3 text-center mb-3">Конвертер величин</h1>
+                <form action="">
+                    <div class="form-group">
+                        <input type="number" id="kmInput" placeholder="Введите километры..."
+                            class="form-control form-control-lg">
+                    </div>
+                </form>
+
+                <div id="output">
+                    <div class="card mb-2">
+                        <div class="card-block">
+                            <h4>Метры:</h4>
+                            <div id="metersOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-2">
+                        <div class="card-block">
+                            <h4>Сантиметры:</h4>
+                            <div id="smOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-2">
+                        <div class="card-block">
+                            <h4>Миллиметры:</h4>
+                            <div id="msOutput"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('kmInput').addEventListener('input', function(e){
+            let km = e.target.value;
+
+            document.getElementById('metersOutput').innerHTML = km * 1000;
+            document.getElementById('smOutput').innerHTML = km * 100000;
+            document.getElementById('msOutput').innerHTML = km * 1000000;
+        })
+    </script>
+</body>
+
+</html>

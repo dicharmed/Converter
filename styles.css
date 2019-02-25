@@ -1,0 +1,20 @@
+body{
+    margin-top: 70px;
+    background-color: #333;
+    color: #fff;
+}
+.card{
+    color:#333333;
+}
+.card-block{
+    padding: 10px;
+}
+.card:first-child{
+    background: #86d7ffcf;
+}
+.card:nth-child(2){
+    background: #f1bdc6;
+}
+.card:last-child{
+    background: #f5f576;
+}
